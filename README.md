@@ -1,6 +1,6 @@
-# Thesis = On the Volume of the Intersection of Balls
+# Thesis: On the Volume of the Intersection of Balls
 
-### Abstract
+## Abstract
 Our project title is ”On the Volume of the intersection of balls ” and our aim
 is to give Csikos formula for the intersection of balls. We mostly follow paper
 Csi98[7] by Csikos and BCO2[3] by Bezdek and Connelly. The motivation of our
