@@ -1,0 +1,102 @@
+\section{Theorem} Let us suppose there is a smooth curve $\mathbf{P}:(a, b) \rightarrow \mathbf{E}^{n N}$ for $n \geq 2$ and $\mathbf{r} \in \mathbf{E}_{+}^{N}$. Now, let $t_{0} \in(a, b)$ is such that the centers $\mathbf{p}_{i}\left(t_{0}\right)$ are different from each other. Then the function $V(t)=V(\mathbf{P}(t), \mathbf{r})$ is differentiable at $t_{0}$ and its derivative must be equal to
+$$ V^{'}(t_0)=\frac{d}{d t} V(t_0)=\sum_{1 \leq i<j \leq N} -d_{i j}^{\prime} \operatorname{V}_{n-1}\left[W^{i j}\left(\boldsymbol{p}_{i}(t_0), r_{i}\right)]\right $$
+where, $V_{n-1}$ denotes the $(n-1)$-dimensional volume\\
+$d_{i j}(t_0)=d\left(\mathbf{p}_{i}(t_0), \mathbf{p}_{j}(t_0)\right)=\left|\boldsymbol{p}_{i}(t)-\boldsymbol{p}_{j}(t_0)\right|$\\
+$d_{i j}^{\prime}$ = $t$-derivative of $d_{i j}$\\
+$W^{i j}=\tilde{C}^{i} \cap \tilde{C}^{j}$
+Remark: We note that the union version of the same problem was proved by Csikos in (Theorem 4.1 of his paper [7] and it is also mentioned in the Main result(literature review) section of this thesis. We have used his proof as the model for our proof. With necessary adjustment we can reach the negative sign. The adjustment is that, from above section Voronoi diagram, we came to know that the outer unit normal of non empty wall in case of intersection is nagative. It is due to the structure or construction of the Voronoi region $C^{i}$ as in intersection we take farthest part.\\
+
+Proof. From Theorem $4.1$ at chapter 4 of this thesis above  , we came to know that $V$ is differentiable at $t_{0}$ and $V^{\prime}\left(t_{0}\right)$ can be given by that formula from above. Originally, this formula was proved by Csikos again in (Theorem 2.3 of [7]). We continue from last part of Chapter 4 of this thesis. We compute the following integral.
+$$
+\int_{F_{i}}\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i}
+$$
+
+
+As it is our case of intersection, we apply the Gauss-Ostrogradskii Divergence theorem  to the domain $\tilde{C}^{i}$ which is the voronoi region of intersection of $i$th cell. The constant vector field is given by $\xi_{i} \equiv \mathbf{p}_{i}^{\prime}\left(t_{0}\right)$
+
+If we look at the structure, the cell $\tilde{C}^{i}$ is bounded by the spherical domain $F_{i}$ and the walls $W^{i j}$. The outer unit normal of a nonempty wall $W^{i j}$ is (The sign will be negative in case of intersection due to construction and fact that as voronoi region $\tilde{C}^{i}$ lies on farther side from ith ball.)
+$$
+\frac{-(\mathbf{p}_{j}\left(t_{0}\right)-\mathbf{p}_{i}\left(t_{0}\right))}{d_{i j}\left(t_{0}\right)} .
+$$
+
+We know that the constant vector field $\xi_{i}$ has divergence 0,so  we get that,
+$$
+0=\int_{\tilde{C}^{i}} \operatorname{div} \xi_{i} d \lambda^{n}=\int_{\partial \tilde{C}_{i}}\left\langle\mathbf{N}^*, \xi_{i}\right\rangle d \mu,
+$$
+
+here, $\mu$ =  $(n-1)$-dimensional volume measure on $\tilde{C}^{i}$.\\
+     $\mathbf{N}^*$ = outer unit normal field
+ We can calculate further and we get,
+$$
+\int_{\partial \tilde{C}^{i}}\left\langle\mathbf{N}^*, \xi_{i}\right\rangle d \mu=\int_{F_{i}}\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i}+\sum_{\substack{j=1 \\ j \neq i}}^{N}\left\langle\frac{-(\mathbf{p}_{j}\left(t_{0}\right)-\mathbf{p}_{i}\left(t_{0}\right))}{d_{i j}\left(t_{0}\right)}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle V_{n-1}\left(W^{i j}\right)
+$$
+Remark:In the above step, we noticed that since surface integral at the Top and bottom part cancel each other since one in on the direction of constant vector field and another is on the opposite direction of constant vector field. For the lateral part we need to compute the surface integrals of spherical part and wall part, which is given below. \\
+Remark: We note that for the spherical part surface integral, we can use the result from Chapter 4 , we have calculated above.Futhermore, we get the following result. 
+$$
+\int_{F_{i}}\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i}=\sum_{\substack{j=1 \\ j \neq i}}^{N}\left\langle\frac{-(\mathbf{p}_{i}\left(t_{0}\right)-\mathbf{p}_{j}\left(t_{0}\right)}{d_{i j}\left(t_{0}\right))}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle V_{n-1}\left(W^{i j}\right) .
+$$
+If we sum the above  for all $i$, we obtain the following calculations.
+$$
+\begin{aligned}
+ & =\sum_{i=1}^{N} \int_{F_{i}}\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i} \\
+& =\sum_{1 \leq i<j \leq N}\left\langle\frac{-(\mathbf{p}_{i}\left(t_{0}\right)-\mathbf{p}_{j}\left(t_{0}\right))}{d_{i j}\left(t_{0}\right)}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)-\mathbf{p}_{j}^{\prime}\left(t_{0}\right)\right\rangle V_{n-1}\left(W^{i j}\right) \\
+& =\sum_{1 \leq i<j \leq N} -d_{i j}^{\prime}\left(t_{0}\right) V_{n-1}\left(W^{i j}\right)
+\end{aligned}
+$$
+$$
+\implies V^{\prime}\left(t_{0}\right) =\sum_{i=1}^{N} \int_{F_{i}}\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i} =\sum_{1 \leq i<j \leq N} -d_{i j}^{\prime}\left(t_{0}\right) V_{n-1}\left(W^{i j}\right)
+$$
+Hence, this is the main result of our problem that was proved.
+
+
+
+
+
+Note: Reaching the final t-derivative term might be tricky. We compute the inner product the following ways to reach the final result.\\
+Firstly, we square the term $d_{i j} $ which lead us to taking inner product of ($p_i-p_j$) with itself.
+
+    $$d_{i j}^2 = || p_{i}^{2}- p_{j}^{2} ||= \left\langle p_i - p_j,p_i-p_j\right\rangle $$
+    Now we differentiate $d_{i j}^2 $ with respect to time(t) 
+    $$ 
+    \frac{d}{dt}(d_{i j}^2) = 2 d_{i j} d^{'}_{i j}
+    $$
+From above two relations we now know that derivative of
+$$d_{i j}^2  = \frac{d}{dt} \left\langle p_i-p_j, p_i -p_j \right\rangle  $$ 
+From above last two relations, we can write the following:
+$$
+2 d_{i j} d^{'}_{i j} = \frac{d}{dt} \left\langle p_i-p_j, p_i -p_j \right\rangle 
+$$
+$$
+d^{'}_{i j}=\frac{\frac{d}{dt} \left\langle p_i-p_j, p_i -p_j \right\rangle 
+}{2 d_{i j}}
+$$
+
+Let $(V,⟨⋅,⋅⟩)$
+be  space of inner product which is of finite dimension and $g,h:\mathbb{R} \rightarrow{V}$ be differentiable functions
+,then, we know that, from the rules of differentiation of inner product.
+$$
+\frac{d}{dt}\left\langle g,h \right\rangle = \left\langle g(t) , h^{'}(t) \right\rangle + \left\langle f^{'}(t), h(t) \right\rangle
+$$
+\text{Now, using this rules, we get,}
+$$
+d^{'}_{i j}= \frac{\left\langle p_i - p_j, (p_i- p_j)^{'} \right\rangle + \left\langle (p_i - p_j)^{'},p_i-p_j\right\rangle}{2 d_{i j}}
+$$
+\text{Again, using the Symmetric property of inner product:} $$\left\langle u,v \right\rangle=\left\langle v,u \right\rangle$$ for  vectors $u$, $v$. 
+$$
+or, d^{'}_{i j}= \frac{\left\langle p_i - p_j, (p_i- p_j)^{'} \right\rangle + \left\langle p_i-p_j, (p_i - p_j)^{'}\right\rangle}{2 d_{i j}}
+$$
+$$
+or, d^{'}_{i j}= \frac{2 \langle p_i - p_j, (p_i- p_j)^{'} \rangle}{2 d_{i j}}
+$$
+From scalar multiplication of inner product, we know: $$ \left\langle \alpha u, v\right\rangle =\alpha \left\langle u,v \right\rangle $$ for  vectors $u$, $v$ and scalar $\alpha$
+Therefore, we finally get,
+$$
+d^{'}_{i j}= \left\langle \frac{ p_i - p_j}{d_{i j}}, (p_i- p_j)^{'} \right\rangle
+$$
+Multiplying both side with -1,
+$$
+-d^{'}_{i j}= \left\langle \frac{ -(p_i - p_j)}{d_{i j}}, (p_i- p_j)^{'} \right\rangle
+$$
+This is the hidden steps from second last step to last step of inner product computation above.
+
+

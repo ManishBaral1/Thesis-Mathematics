@@ -1,0 +1,178 @@
+\section{Literature review}
+Under the condition $q$ is a continuous expansion of $p$,Bollobas[4] had proved conjecture(1) for $ n=2$ ,when $r_1= \dots =r_n$   which implies that when centers $p_i$ are continuously moved towards center $q_i$ in such a way that distances between the centers doesnot increase during the motion, then, planar Kneser Conjecture holds for congruent disks. Bern and Sahai[2] and Csikos[8] tried to provide generalization(for different radii) for Bollobas. Their way of solving the problem is totally different.  Under the same condition as Bollobas that $q$ is an continuous expansion of $p$, Bern and Sahai proved both the conjecture whereas Csikos extended(by modifying suitably) Bollobas's result to arbitrary radii for $n=2$. Bern and Sahai's proof turned out to be powerful tool as it introduced Dirichlet Voronoi decomposition as the domain of study to solve this problem. Later in [7], Csikos showed conjecture(1) is true under additional condition that $q$ is continuous expansion of $p$ and using the concept of Dirichlet Voronoi decomposition. We will talk about the main results of [7] below and use them in proving our problem.\\
+
+For arbitrary radii(but only for $N \leq n+1 $, Gromov had proved conjecture(2) in [12] with the condition that $q$ is a continuous expansion of $p$. Capoyleas [5] had proved conjecture(2) for congruent radii in the plane. In n-dimension for arbitrary radii, but only for $N \leq n+1$, Capoyleas and Pach [6] showed conjecture(1) is true. We noted from these, there is 
+
+
+From all these above, we noted that if $q$
+is an expansion of $p$, then this expansion is continuous, this property does not hold true even
+for $n+2$ points in $\mathbb{E}^n$. For eg, Let $p $ be system of 4 points.
+One interior point of the triangle is determined by rest three. Let $q$ be system of 4 points with where interior point moved sufficiently far, here $q $ is expansion but not continuous.
+
+
+
+My Thesis advisor Prof. Dr. Igors Gorbovickis has  worked on Kneser Poulsen Conjecture. He has proved the KP for different cases. He has published the proofs in the following papers:
+
+\item  KP using Central sets[10]:  He gave new results about central sets of
+subsets of a Riemannian manifold and used them to prove
+ KP in the 2-Dimensional sphere and the hyperbolic plane.
+\item KP(strict) for Case of large radii[9]:To prove this he has used techniques from Tensegrity theory to the theorem of [Sudakov , R. Alexander and Capoyleas and Pach] for strengthening them. (initially he has considered there $\exists $ a positive number $r_0$ s.t. $r>r_0 $ )
+\item  KP for Case of small number of intersections[11]: He proved the KP conjecture under initial configuration=intersection of any 2 balls has common points with no more than $N+ 1$ other ball    
+
+
+
+
+
+
+
+
+
+
+
+\section{Main results}
+
+\subsection{Csikos's Formula[Csi98]}
+\boldsymbol{Theorem 1}. Let  us suppose for $n \geq 2$ and for $0 \leq t \leq 1$  we have a  smooth motion(path trace by that point forms a smooth curve) of configuration point $p=p(0)$ in $\mathbb{E}^n$ given by $  \boldsymbol{p(t)}=(\boldsymbol{p}(t)=\left(\boldsymbol{p}_{1}(t), \ldots, \boldsymbol{p}_{N}(t)\right)$. Let us suppose  each $t$ is such that the centers $\boldsymbol{p}_i(t)$ are distinct. Then, if we regard  $V(t)=V(\mathbf{P}(t), \mathbf{r})=V(\boldsymbol{p}_{i}(t), \boldsymbol{r}_{i})$ as a function of $t$. It is differentiable at $t$ and its derivative is given by:
+$$ V^{'}(t)=\frac{d}{d t} V(t)=\sum_{1 \leq i<j \leq N} d_{i j}^{\prime} \operatorname{V}_{n-1}\left[W_{i j}\left(\boldsymbol{p}_{i}(t), r_{i}\right)]\right $$
+where, $V_{n-1}$ denotes the $(n-1)$-dimensional volume\\
+$d_{i j}(t)=d\left(\mathbf{p}_{i}(t), \mathbf{p}_{j}(t)\right)=\left|\boldsymbol{p}_{i}(t)-\boldsymbol{p}_{j}(t)\right|$\\
+$d_{i j}^{\prime}$ = $t$-derivative of $d_{i j}$\\
+$W_{i j} $ is the hypersurface between balls(intersection of different voronoi regions) about which we will talk about later in Voronoi Decomposition section\\
+Note: Smooth means infinitely many times differentiable
+
+ This Csikós's formula is reformulation of Theorem 4.1 in [Csi98]. Csikos has done the proof  for unions of balls. We can derive the similiar formula for intersection of balls which is what we are doing in this thesis. This formula is used by Bezdek and Connelly in their paper [BCO2] to prove KP in plane. We talk about it in theorem 2 and Corollary 1 below.
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Bezdek and Connelly Theorem and Corollary[BCO2]}
+ \boldsymbol{Theorem 2}. Let us suppose, we have two configurations in $\mathbb{E}^{n}$. The configurations are $\boldsymbol{p}=\left(\boldsymbol{p}_{1}, \ldots, \boldsymbol{p}_{N}\right)$ and $\boldsymbol{q}=\left(\boldsymbol{q}_{1}, \ldots, \boldsymbol{q}_{N}\right)$  such that $\boldsymbol{q}$ is a piecewise-analytic expansion of $\boldsymbol{p}$ in the (n+2) dimensional Euclidean space $\mathbb{E}^{n+2}$. Then Conjecture 1 and Conjecture 2  of Kneser Poulsen conjecture holds true in $\mathbb{E}^{n}$. That means:
+$$
+\operatorname{V}\left[\bigcup_{i=1}^{N} B\left(\boldsymbol{p}_{i}, r_{i}\right)\right] \leq \operatorname{V}\left[\bigcup_{i=1}^{N} B\left(\boldsymbol{q}_{i}, r_{i}\right)\right]
+$$
+$$
+\operatorname{V}\left[\bigcap_{i=1}^{N} B\left(\boldsymbol{p}_{i}, r_{i}\right)\right] \geq \operatorname{V}\left[\bigcap_{i=1}^{N} B\left(\boldsymbol{q}_{i}, r_{i}\right)\right] .
+$$
+Proof: The proof of this theorem is given in Bezdek and Connelly paper[BCO2].\\
+
+
+\boldsymbol{Corollary 1}. Let us suppose  we have two configurations in $\mathbb{E}^{2}$ $\boldsymbol{p}=\left(\boldsymbol{p}_{1}, \ldots, \boldsymbol{p}_{N}\right)$ and $\boldsymbol{q}=\left(\boldsymbol{q}_{1}, \ldots, \boldsymbol{q}_{N}\right)$. Let  $\boldsymbol{q}$ is an arbitrary expansion of $\boldsymbol{p}$. Then Kneser Poulsen Conjectures(both 1 and 2) hold true for $n=2$
+    \item Proof: The  proof of this Corollary is given by Bezdek and Connelly. For the proof we need to apply Lemma $1^*$ of [BCO2]  to the settings $\boldsymbol{p}$ and $\boldsymbol{q}$ so that we will  get that $\boldsymbol{q}$ is an analytic expansion of $\boldsymbol{p}$ in $\mathbb{E}^{4}$. Then rest follows from the Theorem 2 above.
+    \item  It is the "Kneser and Conjecture in plane " which Bezdek and Connelly has proved.
+Remark: How Bezdek and Connelly used Csikos formula?
+ If we look the above literature review, previously most of the mathematicians has proved KP conjecture under continuous expansion condition. Here, Bezdek and Connelly used  Csikós formula to construct the derivative of volume of  union of 4-dimensional balls. The centers are expanding analytically.He then related the 2-dimensional volume to that higher dimensional volume. He then showed, in case of one configuration is an expansion of other,  area of union of 2-dimensional disks increases(in plane, even if there is no continuous expansion).  \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Given below is Corollary 2. It can be obtained by taking limit as $r \xrightarrow{\infty}$ in Corollary 1 above (In corollary 1, $r_1=\dots = r_n = r$. It is also main result of the following mathematicians (Sudakov, Pach,Capoyleas,Alexander). All of them dont give proof of corollary 1. However, Capoyleas in [6] derive Corollary 2 from KP conjecture. We can reformulate the Corollary 2 as follows:
+\subsection{Main results of (Sudakov, Pach, Capoyleas, Alexander)}
+\boldsymbol{Corollary 2}.Let us suppose $\mathbf{q}=\left(\mathbf{q}_{1}, \ldots, \mathbf{q}_{N}\right)$ is an expansion of $\mathbf{p}=\left(\mathbf{p}_{1}, \ldots, \mathbf{p}_{N}\right)$ in $\mathbb{E}^{n}, n \geq 2$. Then we have the following result:
+$$
+m\left[\operatorname{Conv}\left\{\mathbf{q}_{1}, \ldots, \mathbf{q}_{N}\right\}\right] \geq m\left[\operatorname{Conv}\left\{\mathbf{p}_{1}, \ldots, \mathbf{p}_{N}\right\}\right],
+$$
+where Conv stands for the convex hull of a set in $\mathbb{E}^{n}$.
+Note:
+ If $U \subset \mathbb{E}^{n}$ =compact(closed and bounded) convex set
+ $m[K]$ = $n$-dimensional mean width of $U$ (up to multiplication by a dimensional constant)
+$$
+m[K]=\int_{S^{n-1}} \max \{\langle x, u\rangle: x \in U\} d \sigma(u),
+$$
+This is equivalent to saying  length of  perimeter of convex hull of $\boldsymbol{q}$ is greater than or equal to  length of perimeter of  convex hull of $\boldsymbol{p}$.
+Case 1: If this Corollary 2 can be proved for the case when the configurations $\mathbf{q}=\left(\mathbf{q}_{1}, \ldots, \mathbf{q}_{N}\right)$ and $\mathbf{p}=\left(\mathbf{p}_{1}, \ldots, \mathbf{p}_{N}\right)$ arenot congruent, the inequality become strict. This is strengthening of corollary 2.
+
+This case 1 has been used by my thesis advisor Prof. Dr. Igors Gorbovickis in [9] to get strict KP conjecture for large radii.
+\subsection{Strict KP conjecture for large radii: Prof. Dr. Igors Gorbovickis}
+\boldsymbol{Theorem 3}: Let us suppose $\mathbf{q}=\left(\mathbf{q}_{1}, \ldots, \mathbf{q}_{N}\right)$ is  expansion of $\mathbf{p}=\left(\mathbf{p}_{1}, \ldots, \mathbf{p}_{N}\right)$ in n-dimensional Euclidean space $\mathbb{E}^{n}$, then there exists a radius $r_{0}>0$ such that for any radius $r \geq r_{0}$
+$$
+\operatorname{V}\left[\bigcup_{i=1}^{N} B\left(\mathbf{p}_{i}, r\right)\right] \leq \operatorname{V}\left[\bigcup_{i=1}^{N} B\left(\mathbf{q}_{i}, r\right)\right]
+$$
+$$
+\operatorname{V}\left[\bigcap_{i=1}^{N} B\left(\mathbf{p}_{i}, r\right)\right] \geq \operatorname{V}\left[\bigcap_{i=1}^{N} B\left(\mathbf{q}_{i}, r\right)\right]
+$$
+and similiar to case 1, the inequalities becomes strict if the configurations $\mathbf{q}=\left(\mathbf{q}_{1}, \ldots, \mathbf{q}_{N}\right)$ and $\mathbf{p}=\left(\mathbf{p}_{1}, \ldots, \mathbf{p}_{N}\right)$ arenot congruent.\\
+Remark: We can note that Csikos formula was used as a tool by Bezdek and Connelly. The result of a corollary of Bezdek and Connelly was obtained by Sudakov, Pach, Capoyleas, Alexander. Further extending that result Prof. Dr. Igors obtained the strict KP conjecture for large radii. All these results are motivation by KP conjectures.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

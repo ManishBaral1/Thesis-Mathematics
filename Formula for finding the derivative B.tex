@@ -1,0 +1,269 @@
+
+
+
+\section{Theorem} 
+Let us suppose there is a infinitely many times differentiable (smooth) curve  $\mathbf{P}:(a, b) \rightarrow \mathbf{E}^{n N}$. Let $n \geq 2$ , $\mathbf{r} \in \mathbf{E}_{+}^{N}$. Let us assume $t_{0} \in(a, b)$ is such a way that  balls $B\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right)$ are distinct from each other.Then the function $V(t)=V(\mathbf{P}(t), \mathbf{r})$ is differentiable at $t_{0}$ and its derivative is given by the following formula.
+$$
+V^{\prime}\left(t_{0}\right)=\sum_{i=1}^{N} \int_{F_{i}}\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i}
+$$\\
+where $F_{i}$ =$S\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right) \cap S\left(\mathbf{P}\left(t_{0}\right), \mathbf{r}\right)$\\
+& $\mathbf{n}_{i}$ = the outer unit normal vector field on the sphere $S\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right)$\\
+&$\mu_{i}$ = $(n-1)$-dimensional volume measure on $S\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right)$ \\
+
+Proof. As we know that from Corollary 3.2 above, since $V(\mathbf{P}(t), \mathbf{r})$ and $V(\mathbf{Q}(t)$ have equal derivatives, we can replace the original $\mathbf{P}$ with its linear approximation( due to Taylor expansion) $\mathbf{Q}(t)=$ $\mathbf{P}\left(t_{0}\right)+\left(t-t_{0}\right) \mathbf{P}^{\prime}\left(t_{0}\right)$\\
+We now want to embedd the n-dimensional Euclidean space  $\mathbf{E}^{n}$ with one extra time dimension. We can consider  $\mathbf{E}^{n+1}$ as the product of $\mathbf{E}^{n} \times \mathbf{E}$. Then ,a typical element of  this $(n+1)$-dimensional Euclidean space  can be written in this  form $(\mathbf{p}, t)$, where $\mathbf{p} \in \mathbf{E}^{n}, t \in \mathbf{E}$. Let us fix,  $t \in(a, b)$. Now, 
+we  construct the  $\mathbf{E}^{n+1}$ dimensional version of $B\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right),S\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right) , S\left(\mathbf{P}\left(t_{0}\right), \mathbf{r}\right)$ and $F_{i}$\\
+After that we  apply the very important Gauss-Ostrogradskii  divergence theorem for the union of the solid cylinders to calculate the surface integrals.
+$$
+\mathbf{B}_{i}^*(t)=\left\{(\mathbf{p}, \tau) \in \mathbf{E}^{n+1} \mid a \leq \tau \leq t, \mathbf{p} \in B\left(\mathbf{p}_{i}(\tau), r_{i}\right)\right\}
+$$
+NOTATION: Here notations can be confusing. For  $\mathbf{E}^{n}$ space, we have used the notations $B\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right),S\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right) , S\left(\mathbf{P}\left(t_{0}\right), \mathbf{r}\right)$ and $F_{i}$\\
+And for  $\mathbf{E}^{n+1}$ space, we have used the similiar notation but little bit bold and with $*$ as superscript. They look   $\mathbf{B}^*\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right),\mathbf{S}^*\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right) , \mathbf{S}^*\left(\mathbf{P}\left(t_{0}\right), \mathbf{r}\right)$ and $\mathbf{F}_{i}^{*}$
+We have a constant vector field(which has divergence zero or divergence free)
+$$
+\xi \equiv(\mathbf{0}, 1) = 0 \vec{i} + 1 \vec{j} 
+$$
+Divergence = $$\frac{d(0 \vec{i})}{d \Vec{i}} + \frac{d(1 \vec{j})}{d \Vec{j}}=0+0=0 $$\\
+
+
+
+
+
+
+
+
+We know that intuitively Gauss-Ostrogradskii theorem(in vector calculus) says that the volume integral of divergence over region inside a surface and surface integral of vector field over a surface(closed) are equal. Let us consider $\Omega$ is a compact(i.e. bounded and closed) domain in $\mathbf{E}^{m}$ with piecewise(i.e. smoothness holds even if the domain is divided into subdomains) smooth boundary  is Let a smooth vector field(constant) on a neighborhood of $\Omega$ be donoted by $\partial \Omega, \xi$, then, we have the following from Gauss divergence theorem:
+$$
+\int_{\Omega} \operatorname{div} \xi d \lambda^{m}=\int_{\partial \Omega}\langle\mathbf{N}^*, \xi\rangle d \mu,
+$$
+where $\mathbf{N}^*$ = outer unit normal vector field on $\partial \Omega$ (a. e.  on smooth components of $\partial \Omega$ )\\
+$\operatorname{div} \xi$ = divergence of $\xi$\\
+$\lambda^{m}$ = $m$-dimensional Lebesgue measure\\
+$\mu$ = $(m-1)$-dimensional volume measure on $\partial \Omega$. \\
+
+
+\textbf{Further Describing our cylindrical domain}\\
+
+We have our domain $\Omega(t)=\bigcup_{i=1}^{N} \mathbf{B}^*_{i}(t)$\\
+The boundary of the domain $\partial \Omega(t)$  is  smooth  piecewise. (It is due to the fact that we changed  the motion $\mathbf{P}(t)$ to its linear motion(due to Taylor expansion) $\mathbf{Q}(t)$ which was possible due to corollary(3.2).  Life-tubes of 2 smoothly moving spheres may intersect with one another in very complicated way, generally.) Since, the boundary is piecewise smooth, we can use Gauss divergence theorem here. 
+
+\textbf{Top and bottom}
+The boundary $\partial \Omega(t)$ has 2 flat components:  bottom  and  top.  The outer unit normal vector field on the bottom $\mathbf{B}^*(\mathbf{Q}(a), \mathbf{r}) \times\{a\}$ is $-\xi$ and on the top $\mathbf{B}^*(\mathbf{Q}(t), \mathbf{r}) \times$ $\{t\}$ it is $\xi$.\\
+\textbf{Lateral}
+$$
+\large\mathbf{S}^*(t)=\left\{(\mathbf{p}, \tau) \in \mathbf{E}^{n+1} \mid a \leq \tau \leq t, \mathbf{p} \in S(\mathbf{Q}(\tau), \mathbf{r})\right\}
+$$
+gives the lateral part of $\partial\Omega(t)$. Similiarly,we have,
+$$
+\mathbf{S}_{i}^*(t)=\left\{(\mathbf{p}, \tau) \in \mathbf{E}^{n+1} \mid a \leq \tau \leq t, \mathbf{p} \in S\left(\mathbf{q}_{i}(\tau), r_{i}\right)\right\}
+$$
+$\mathbf{F}_{i}^*(t)=\mathbf{S}^*(t) \cap \mathbf{S}_{i}^*(t)$
+
+Also, we have ,  for $a \leq \tau \leq t$,  the set $F_{i}(\tau)=\mathbf{F}_{i}^*(t) \cap\left(\mathbb{E}^{n} \times\{\tau\}\right)$. 
+Finally, we have the outer unit normal vector field of the hypersurface of cylinder $\mathbf{F}_{i}^*$ at $(\mathbf{p}, \tau) \in \mathbf{F}_{i}^*$ give by;
+$$
+\mathbf{N}^*= \frac{\left(\mathbf{n}_{i}(\mathbf{p}, \tau),-\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle\right)}{\sqrt{1+\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}},
+$$
+
+Here we know that,  outer unit normal of the sphere $S\left(\mathbf{q}_{i}(\tau), r_{i}\right)$ at $\mathbf{p}$ is denoted by $\mathbf{n}_{i}(\mathbf{p}, \tau)$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Remark 1}: Where inner product come from?( in outer unit normal of hyperspace of cylinder)
+$$
+p(t)=(p_1(t),p_2(t),\dots p_n(t),\quad t  ) \in \mathbb{E}^{n+1}
+$$
+And its derivatives be,
+$$
+p^{'}(t)=(p_1^{'}(t),p_2^{'}(t),\dots p_n^{'}(t),\quad 1  ) 
+$$
+Let us denote the outer unit normal vector field of the hyperspace of cylinder by two components as follows:
+$$
+\mathbf{N}^* \in \mathbb{E}^{n+1} =(n_i\in \mathbb{E},n_t \in 1)
+$$
+
+$$\mathbf{N}^*.p^{'}(t) \quad \textbf{must be orthogonal}$$
+$$
+\mathbf{N}^*.p^{'}(t)=0
+$$
+$$
+\text{or,} \quad \binom {n_i}{n_t}.\binom {x^{'}(t)}{1}=0
+$$
+$$
+\text{or,} \quad n_t = -\big<   n_i, x^{'}(t)   \big>
+$$
+So, this is how the negative inner product gives one of the component of $\mathbf{N}^*$. We know,
+$$
+\mathbf{N}^* \in \mathbb{E}^{n+1} =(n_i,n_t )
+$$
+Normalizing $ n_i$ and $n_t$, we get(i.e. they are being divided by their magnitude)
+$$
+\mathbf{N}^*= \left( \frac{ \mathbf{n}_{i} } {\sqrt{1+\left\langle \mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}},\frac{- \left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle} {\sqrt{1+\left\langle \mathbf{n}_{i},\mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}} \right)
+$$
+$$
+\mathbf{N}^*= \frac{\left(\mathbf{n}_{i}(\mathbf{p}, \tau),-\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle\right)}{\sqrt{1+\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}},
+$$\\
+Note: We can further study about this normal using cylindrical co-ordinates and describing the tangent plane in more detail. We can also say that , if we consider two vectors in tangent plane, a vector perpendicular to both of them(given by cross product of those 2 vectors)  is normal $\mathbf{N}^*$ of that tangent plane.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Remark 2}
+Note: This Remark 2 is relating to more advanced concepts of mathematics.
+We noted here that tube $S\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right) \times[a, b]$ is diffeomorphic to $\mathbf{S}_{i}^*(t)$. We get the following, if we identify 2 spaces by diffeomorphism.
+
+$$
+(\mathbf{p}, \tau) \leftrightarrow\left(\mathbf{p}+\left(\tau-t_{0}\right) \mathbf{p}^{\prime}\left(t_{0}\right), \tau\right) \in \mathbb{S}_{i}(t),
+$$
+$\implies$ This is a linear map and linear maps are diffeomorphic ( i.e. if we identify those two space as manifolds*, the above given differentiable map is bijection and its inverse is differentiable as well) 
+
+
+
+\textbf{Remark 3}
+For all $\mathbf{p}$ belonging to $S\left(\mathbf{p}_{i}\left(t_{0}\right), r_{i}\right)$ and for all $\tau $ belonging to the interval $[a, b]$, we can express the $n$-dimensional volume measure  with $(n-1)$ dimensioanl volume measure $\mu_{i}$ and the one-dimensional Lebesgue measure $\lambda$ on $[a, b]$. The above $(n-1)$ dimensional volume measure $\mu_{i}$ is multiplied by a factor $\sqrt{1+\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}$ which depends upon derivative of $\mathbf{p}_i(t)$ at $t_0$ and the outer unit normal vector of sphere $n_i$
+i.e.
+$$
+\sqrt{1+\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}} \mu_{i} \times \lambda
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We know that the vector field $\xi=(\mathbf{0}, 1)$ is divergence( =0) free, \textbf{the Gauss-Ostrogradskii divergence theorem gives the following result:} We start by calculating the surface integrals at top+bottom+lateral part of the cylinder. The surafce integral at the lateral part is given by integrating inner product of $\mathbf{N}^*$ and $\xi$ over the boundary. The calculation is straightforward. We computer inner product properly and differentiate on later part. In one step, we replace $ d \mu  $ by $\sqrt{1+\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2} } d \mu_i * d \tau  $. It is due to Remark 3 (the idea of representing n-dimensional volume measure as product of 1-dimensional volume measure and (n-1) dimensional measure. Now, we proceed to application of Divergence theorem;
+$$
+\begin{aligned}
+0 & =\int_{\Omega(t)} \operatorname{div} \xi d \lambda^{n+1}=\int_{\partial \Omega(t)}\langle\mathbf{N}^*, \xi\rangle d \mu \\
+& =V(\mathbf{Q}(t), \mathbf{r})-V\left(\mathbf{Q}\left(t_{0}\right), \mathbf{r}\right)+\sum_{i=1}^{N} \int_{\mathbb{F}_{i}(t)}\left\langle \frac{\left(\mathbf{n}_{i}(\mathbf{p}, \tau),-\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle\right)}{\sqrt{1+\left\langle\mathbf{n}_{i}(\mathbf{p}, \tau), \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}}, (0,1) \right\rangle d \mu \\
+& =V(\mathbf{Q}(t), \mathbf{r})-V\left(\mathbf{Q}\left(t_{0}\right), \mathbf{r}\right)+ \sum_{i=1}^N             \int_{\mathbb{F}_i(t)}\left\langle \left( \frac{ \mathbf{n}_{i} } {\sqrt{1+\left\langle \mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}},\frac{- \left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle} {\sqrt{1+\left\langle \mathbf{n}_{i},\mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}} \right),(0,1)\right\rangle d \mu \\
+& =V(\mathbf{Q}(t), \mathbf{r})-V\left(\mathbf{Q}\left(t_{0}\right), \mathbf{r}\right)-\sum_{i=1}^{N} \int_{\mathbb{F}_{i}(t)} \frac{\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle}{\sqrt{1+\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}} d \mu \\
+& =V(\mathbf{Q}(t), \mathbf{r})-V\left(\mathbf{Q}\left(t_{0}\right), \mathbf{r}\right)-\sum_{i=1}^{N} \int_{\mathbb{F}_{i}(t)} \frac{\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle}{\sqrt{1+\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2}}}  \sqrt{1+\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle^{2} } d \mu_i * d \tau \\
+& \text{or,}\quad 0 =V(\mathbf{Q}(t), \mathbf{r})-V\left(\mathbf{Q}\left(t_{0}\right), \mathbf{r}\right)-\sum_{i=1}^{N} \int_{a}^{t}\left(\int_{F_{i}(\tau)}\left\langle\mathbf{n}_{\mathbf{i}}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i}\right) d \tau
+\end{aligned}
+$$
+Differentiating both sides with respect to $t$ at $t_0$, we get 
+$$
+\frac{d(V(\mathbf{Q}(t), \mathbf{r})-V\left(\mathbf{Q}\left(t_{0}\right), \mathbf{r}\right)}{d \tau} = \frac{d}{d \tau} \sum_{i=1}^{N} \int_{0}^{t} \left( \int_{F_{i}(\tau)} \left\langle \mathbf{n}_i,\mathbf{p}_{i}^{\prime}(t_0) \right\rangle  d \mu_i  \right) d \tau
+$$
+Note: $\tau = t- t_0$
+$$\implies
+V^{\prime}\left(t_{0}\right)=\sum_{i=1}^{N} \int_{F_{i}}\left\langle\mathbf{n}_{i}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i}
+$$
+
+We know, if $n \geq 2$, 
+The dependency is continuous in a neighborhood of $t_{0}$.
+i.e. the integrals
+$$
+\int_{F_{i}(\tau)}\left\langle\mathbf{n}_{\mathbf{i}}, \mathbf{p}_{i}^{\prime}\left(t_{0}\right)\right\rangle d \mu_{i}
+$$
+depends on $\tau$ in the neighborhood of any $\tau_{0}$  continuously where the balls $B\left(\mathbf{p}_{i}\left(\tau_{0}\right), r_{i}\right)$ are different
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+
+\section{Configurations}
+Let us use the notation $\mathbf{E}^{n}$ for $n$-dimensional Euclidean space. Let us define the inner product by $\langle\mathbf{p} , \mathbf{q}\rangle =\sum_{i=1}^{n} p_{i}. q_{i}|$, norm by   $|\mathbf{p}|=\sqrt{\langle\mathbf{p}, \mathbf{p}\rangle}$, and metric(distance) by $d(\mathbf{p_i}, \mathbf{p_j})=|\mathbf{p_i}-\mathbf{p_j}|$.
+
+For every points in the Euclidean space $\mathbf{p} \in \mathbf{E}^{n}$ , we give radius $r \in \mathbf{E}_{+}$, where set of positive real numbers is denoted by $\mathbf{E}_{+}$ which is just another notation for($\mathbb{R}^n$), Let us suppose  closed ball of radius $r$ and center $\mathbf{p}$ be denoted by $B(\mathbf{p}, r)$ , let us suppose boundary of the sphere is denoted by $S(\mathbf{p}, r)$
+Now, let us to go the configuration of a system of $N$ balls in $\mathbf{E}^{n}$. Let us denote the system of centers by $\mathbf{P}=\left(\mathbf{p}_{\mathbf{1}}, \ldots, \mathbf{p}_{N}\right) \in \mathbf{E}^{n N}$ and let us denote the corresponding radii by $\mathbf{r}=\left(r_{1}, \ldots, r_{N}\right) \in \mathbf{E}_{+}^{N}$. If we are given the system of $\mathbf{P}$ and $\mathbf{r}$,    the union of the balls $B\left(\mathbf{p}_{\mathbf{i}}, r_{i}\right)$ is denoted by $B(\mathbf{P}, \mathbf{r})$ for $1 \leq i \leq N$ (i.e. $B(\mathbf{P}, \mathbf{r}) =\bigcup_{i=1}^{n} B\left(\mathbf{p}_{\mathbf{i}}, r_{i}\right)$) In the similiar way, the boundary of the domain $B(\mathbf{P}, \mathbf{r})$ is denoted by $S(\mathbf{P}), $ and the $n$-dimensional volume of the ball $B(\mathbf{P}, \mathbf{r})$ is denoted by $V(\mathbf{P}, \mathbf{r})$. 
+
+
+
+
+Let us suppose there are two configurations of N points in  $\mathbb{E}^n$ $ \boldsymbol{P}=\left(\boldsymbol{p}_{1}, \ldots, \boldsymbol{p}_{N}\right) \in \mathbb{E}^{n}$ and $\boldsymbol{Q}=\left(\boldsymbol{q}_{1}, \ldots, \boldsymbol{q}_{N}\right) \in \mathbb{E}^{n}$, $\forall 1\leq i < j \leq N,  \left|\boldsymbol{p}_{i}-\boldsymbol{p}_{j}\right|\ \leq \left|\boldsymbol{q}_{i}-\boldsymbol{q}_{j}\right|$, then Q is expansion of P. \\
+Let us suppose, there is a motion $\boldsymbol{P}(t)=\left(\boldsymbol{p}_{1}(t), \ldots, \boldsymbol{p}_{N}(t)\right) \in \mathbb{E}^{n}$ for all $1 \leq i \leq N$ and $0 \leq t \leq 1$ such that $\boldsymbol{P}(0)=\boldsymbol{P}$ and $\boldsymbol{P}(1)=\boldsymbol{Q}$. We call this motion continuous expansion if for $1 \leq i<j \leq N$ $\left|\boldsymbol{p}_{i}(t)-\boldsymbol{p}_{j}(t)\right|$ is monotonically increasing.\\
+
+
+\section{Kneser Poulsen Conjectures}
+\textbf{Kneser Poulsen Conjectures(KP)}( conjectured independently by Kneser[15] in 1955 and Poulsen[16] in  1954) for $r_{1}=\cdots=r_{N}$ ) states that if $\boldsymbol{Q}=\left(\boldsymbol{q}_{1}, \ldots, \boldsymbol{q}_{N}\right)$ is an arbitrary expansion of $\boldsymbol{P}=\left(\boldsymbol{p}_{1}, \ldots, \boldsymbol{p}_{N}\right)$ in $\mathbb{E}^{n}$( i.e. $\forall 1\leq i < j \leq N,  \left|\boldsymbol{p}_{i}-\boldsymbol{p}_{j}\right|\ \leq \left|\boldsymbol{q}_{i}-\boldsymbol{q}_{j}\right|$), then we get the following holds true\\ 
+\begin{itemize}
+\item Conjecture 1. 
+$$
+\operatorname{V}\left[\bigcup_{i=1}^{N} B\left(\boldsymbol{p}_{i}, r_{i}\right)\right] \leq {V}\left[\bigcup_{i=1}^{N} B\left(\boldsymbol{q}_{i}, r_{i}\right)\right]
+$$
+\item Conjecture 2. 
+$$
+\operatorname{V}\left[\bigcap_{i=1}^{N} B\left(\boldsymbol{p}_{i}, r_{i}\right)\right] \geq \operatorname{V}\left[\bigcap_{i=1}^{N} B\left(\boldsymbol{q}_{i}, r_{i}\right)\right] .
+$$
+\item still open for $n \geq 3$
+\end{itemize}
+
+
+ \section{Importance of KP}
+  It is one of the main problem in topology(combinatorial) and in geometry.A new insight high-dimensional spaces's structure can be derived if one could prove this conjecture.This proof has lots of important implications  to the fields algebraic topology, geometry, group theory, and other different fields of mathematics, computer science and physics,etc. The problem itself is motivation for the  invention of new mathematical tools,ideas and techniques.
+In the past attempts, many Mathematicians tried to solve this conjectures came up with the new mathematical ideas(techniques) like  introduction of new cohomology theories and the study of topological  complexity and Borsuk-Ulam Theorem. In our paper, we are also following a Csikos technique(formula) to calculate the volume. His formula was also motivated from Kneser and Poulsen conjecture.\\
+
+NOTATIONS ABOUT $\mathbf{Q}$:
+We have used  $\mathbf{Q} =(\mathbf{q}_1,\dots,\mathbf{q}_N)$ and $\mathbf{P}(1)=\mathbf{Q}$ as this configuration in first part of this thesis Intro, literature review,etc. In Lemma 3.1,  $\mathbf{Q}$ is just this configurations of points $\mathbf{Q} =(\mathbf{q}_1,\dots,\mathbf{q}_N)$. From Chapter 3, Corollary 3.2 and below, we have used the symbol  $\mathbf{Q}$( along with $t_0$) to denote the Taylor expansion's linear part/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

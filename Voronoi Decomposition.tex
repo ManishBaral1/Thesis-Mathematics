@@ -1,0 +1,83 @@
+Voronoi(and Dirichlet)Decomposition  is a technique that divides a space into regions on the basis  of distances to a set of considered points. In chapter 4 above, we find out the method to find derivative of the function $V(t)=V(\mathbf{P}(t), \mathbf{r})$. There, we got a final formula. If we need to compute the volume of Union or intersection of balls , we first need to to divide the space using Dirichlet Voronoi decomposition and we apply Gauss-Ostrogradskii divergence theorem to those decomposed voronoi region(cells).
+We will give introduction of Voronoi decomposition below.\\
+
+\begin{itemize}
+
+
+    \item Let us begin by defining the power of a point.The power of a point $\mathbf{a}$ with respect to a ball $B(\mathbf{p}, r)$ can be defined as this real number $|\mathbf{p}-\mathbf{a}|^{2}-r^{2}$. Then, when we are given  $N$ spheres by assigning the radii $\mathbf{r}$ to the centers $\mathbf{P}$. The, we can define $K_{i}(\mathbf{a})=\left|\mathbf{p}_{\mathbf{i}}-\mathbf{a}\right|^{2}-r_{i}^{2}$ as the ith  power of $\mathbf{a}$ wrt $i$ th ball. 
+
+
+    
+    \item  
+    If $\mathbf{p}_{\mathbf{i}} \neq \mathbf{p}_{j}$,  $1 \leq i<j \leq N$, then  a half-space bounded by hyperplane is defined by this inequality $K_{i}(\mathbf{a}) \leq K_{j}(\mathbf{a})$\\ 
+    The following  is the equation of the hyperplane. 
+    $$
+2\left\langle\left(\mathbf{p}_{\mathbf{i}}-\mathbf{p}_{j}\right), \mathbf{a}\right\rangle=\mathbf{p}_{i}^{2}-\mathbf{p}_{j}^{2}+r_{j}^{2}-r_{i}^{2} .
+$$\\
+Remark: Since, at hyperplane $K_{i}(\mathbf{a})=K_{j}(\mathbf{a})$,therefore this equation of the hyperplane is given by $\left|\mathbf{p}_{\mathbf{i}}-\mathbf{a}\right|^{2}-r_{i}^{2}=\left|\mathbf{p}_{\mathbf{j}}-\mathbf{a}\right|^{2}-r_{j}^{2}$
+
+
+Case 1: For any pair $1 \leq i<j \leq N$, if $\mathbf{p}_{i}=\mathbf{p}_{j}$ (same center), then $K_{i}(\mathbf{a})-K_{j}(\mathbf{a})=r_{j}^{2}-r_{i}^{2}$ is constant.\\
+Case 2: If balls are distinct,we determine Voronoi decomposition.
+
+
+If the balls are distinct, then the balls determine a decomposition of the space into $N$ possibly unbounded or empty polyhedral domains. The $i$ th cell of the decomposition is given as the closure of the open domain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\item Then, let us suppose we are given configuration $ \mathbf{P}=(p_1, \dots ,p_N) \in  \mathbb{E}^n$ and radii is given by $r_1, \dots, r_N$. Then the following sets gives the  $i$th cell decomposition. This is called as Dirichlet Voronoi Decomposition:\\ 
+$$
+C_{i}=\left\{\mathbf{a} \in \mathbf{E}^{n} \mid K_{i}(\mathbf{a})\leq K_{j}(\mathbf{a}) \text { for all } 1 \leq j \leq N, j \neq i\right\} \text {. }
+$$
+$$
+C_{i}=\left\{\mathbf{a} \in \mathbf{E}^{n} \left|\mathbf{p}_{\mathbf{i}}-\mathbf{a}\right|^{2}-r_{i}^{2}\leq \left|\mathbf{p}_{\mathbf{j}}-\mathbf{a}\right|^{2}-r_{j}^{2}  \text { for all } 1 \leq j \leq N, j \neq i\right\}
+$$
+We call the set $C_{i}$ as nearest point Dirichlet Voronoi region of points $\mathbf{a}$. This corresponds with Union  problem. A very good argument about how this fits the Union version of this problem is done by Edelsbrunner[17] in his paper.  
+
+
+
+
+$$
+C^{i}=\left\{\mathbf{a} \in \mathbf{E}^{n} \mid K_{i}(\mathbf{a}) \geq K_{j}(\mathbf{a}) \text { for all } 1 \leq j \leq N, j \neq i\right\} \text {. }
+$$
+$$
+C^{i}=\left\{\mathbf{a} \in \mathbf{E}^{n} \left|\mathbf{p}_{\mathbf{i}}-\mathbf{a}\right|^{2}-r_{i}^{2} \geq \left|\mathbf{p}_{\mathbf{j}}-\mathbf{a}\right|^{2}-r_{j}^{2} \text { for all } 1 \leq j \leq N, j \neq i\right\}
+$$
+We call the set $C^{i} $ as farthest point Dirichlet Voronoi cells. This corresponds with the intersection version of our problem. More  reasearch about this region is done by Seidel[18]. This decomposition for the intersection is what we are using in our problem as we need to find the volume of intersection of the balls. 
+
+\item When this Voronoi decomposition is induced in the ball $B(\mathbf{P}, \mathbf{r})$, we call it  (trauncated) nearest and farthest Voronoi cells for union and intersection respectively.
+
+$$
+\tilde{C}_{i}=\bar{C}_{i} \cap B(\mathbf{P}, \mathbf{r})=\bar{C}_{i} \cap B\left(\mathbf{p}_{i}, r_{i}\right),
+$$
+Here, $\bar{C}$ = closure of the set $C$.
+$$
+\tilde{C}^{i}=\bar{C}^{i} \cap B(\mathbf{P}, \mathbf{r})=\bar{C}_{i} \cap B\left(\mathbf{p}_{i}, r_{i}\right),
+$$
+Here, $\bar{C}$ = closure of the set $C$.
+
+
+
+
+\item We mainly talk about the intersection part now because that is what we are doing later.  The term  $W^{i j}$ appear in our final formula. It is called the wall. We are considering the intersection case, so, the wall $W^{i j}$ between the cells $\tilde{C}^{i}$ and $\tilde{C}^{j}$  can be defined as the intersection of $ith$ and $jth $ vornoi regions i.e. $W^{i j}=\tilde{C}^{i} \cap \tilde{C}^{j}$. At $K_{i}(\mathbf{a})=K_{j}(\mathbf{a})$, the $W^{i j}$ is not empty. 
+For easiness of notation and to show  relation of $\tilde{C}^{i}$ and $W^{i j}$ with $(\mathbf{P}, \mathbf{r})$, we normally use $\tilde{C}^{i}(\mathbf{P}, \mathbf{r})$ and $W^{i j}(\mathbf{P}, \mathbf{r})$
+
+
+\item There are many easily verified properties of Voronoi diagrams. We will use mainly property(iv) given in section 3 of [BCO2] in our problem of intersection. The property says, when $W^{i j}(\mathbf{P},\mathbf{r})$ is non empty, the vector $\mathbf{p}_j - \mathbf{p}_i $ is a scalar multiple  (and negative in sign ) of the outward pointing normal to boundary of $C^i(\mathbf{r})$ at $W^{i j}(\mathbf{P}, \mathbf{r})$. If we draw  the outer unit normal vector of of region $C^{i}$ in all directions, one relating with  $C^{i}$ will be in opposite direction to the cell $C^{i}$.
+
+\end{itemize}
+
+
+
