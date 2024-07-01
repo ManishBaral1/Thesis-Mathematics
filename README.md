@@ -1,4 +1,4 @@
-# Thesis: On the Volume of the Intersection of Balls
+# Thesis: On the Volume of the Intersection of Balls (Discrete Geometry)
 
 ## Abstract
 Our project title is ”On the Volume of the intersection of balls ” and our aim
